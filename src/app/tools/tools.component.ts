@@ -44,8 +44,7 @@ public req1:any;
 public req2:any;
 private req:any;
   toolList:any;
-  console1:any;console2:any;console3:any;console4:any;console5:any;
-  console6:any;console7:any;console8:any;console9:any;console10:any;console11:any;console12:any;nullconsole:any;
+  console1:any;console2:any;console3:any;console4:any;console5:any;nullconsole:any;
 movebay:any;
 toolid1:any;
 public allconsoles:any;
@@ -85,29 +84,12 @@ toolprojectsdetails: any;
     this.toolid1 = this.route.snapshot.params['id'];
     
     this.callAlltools();
-    
-
-    // this.req1 = this.http.get('assets/json/movebay.json').subscribe(data => {
-    //   console.log(data);
-    //   this.movebay = data;
-    //   console.log(this.movebay.length)
-    //   this.total = this.movebay.length;
-
-      
-    // });
-
-
+ 
     this.req1 = this._toolservice.getTools().subscribe(data=>{
       this.movebay = data; 
       this.total = this.movebay.length;
 
     })
-
-    // this.req2 = this.http.get('assets/json/consoles.json').subscribe(data => {
-    //   console.log(data);
-    //   this.allconsoles = data;
-      
-    // });
 
     this.req2 = this._toolservice.getConsoles().subscribe(data=>{
       this.allconsoles = data;
@@ -124,12 +106,7 @@ toolprojectsdetails: any;
 
       this._dashserve.getToolCategory().subscribe(data=>{
         this._toolCategory = data;
-      //  this._toolCat = this._toolCategory.map(data=>{
-      //    return data.category_name;
-      //  })
-      //  this._toolCatId = this._toolCategory.map(data=>{
-      //    return data.id;
-      //  })
+    
       })
 
       this._dashserve.getAllusers().subscribe(data=>{
@@ -142,8 +119,6 @@ toolprojectsdetails: any;
         this.test1 = this.selectprojects;
 
       })
-      
-
 }
 
 filterValue(event){
@@ -184,37 +159,13 @@ callAlltools(){
       this.console5 = this.toolList.filter(data => {
       return data.bay==243 && data.is_active == true});
 
-      this.console6 = this.toolList.filter(data => {
-      return data.bay==255 && data.is_active == true});
-
-      this.console7 = this.toolList.filter(data => {
-      return data.bay==244 && data.is_active == true});
-
-      this.console8 = this.toolList.filter(data => {
-      return data.bay==258 && data.is_active == true});
-
-      this.console9 = this.toolList.filter(data => {
-      return data.bay==259 && data.is_active == true});
-
-      this.console10 = this.toolList.filter(data => {
-        return data.bay==260 && data.is_active == true});
-
-        this.console11 = this.toolList.filter(data => {
-          return data.bay==261 && data.is_active == true});
-      
-          this.console12 = this.toolList.filter(data => {
-            return data.bay==262 && data.is_active == true});
-
       this.nullconsole = this.toolList.filter(data => {
       return data.bay==259 && data.is_active == false});
 
   });
 }
 
-
 saveNewTools(tooldata){
-  // tooldata.image_field = this.imageToBackend;
-  // console.log('IMAGE IN SAVE API',this.imageToBackend);
   this._dashserve.saveNewTools(tooldata).subscribe(data=>{
     this.messageresponse = data;
     this.openModal(this.messageresponse);
@@ -296,8 +247,6 @@ toolassignprojects(details,id){
 
   }
 
-
-
 swapTools(data){
   var temp1 = data.too1.bay;
   var temp2 = data.too1.bay_number;
@@ -362,8 +311,6 @@ swapTools(data){
         this.movebay = data;
         this.total = this.movebay.length;
       })
-          
-      //     // this.router.navigate(['dashboard']);
      })
 
   }
@@ -387,7 +334,6 @@ swapTools(data){
     };
     this.modalRef = this._modalservice.show(ModalContentComponent, {initialState});
     this.modalRef.content.closeBtnName = 'OK';
-    // this.modalRef = this._modalservice.show(temp);
   }
 
   titleCaseWord(str) {
@@ -396,7 +342,6 @@ swapTools(data){
       str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
     }
     this.addtools.name = str.join(' ');
-    // return str.join(' ');
   }
 
  

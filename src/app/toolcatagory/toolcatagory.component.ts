@@ -12,10 +12,7 @@ declare var $ :any;
 export class ToolcatagoryComponent implements OnInit {
   
   [x: string]:any;
-//   Tool_Name:any;
-//   clock:any;
-//   _cumulativeLab:any;
-//   _quaterLab:any;
+
   
 //   idToken = localStorage.getItem('csrftoken');
 apiRoot: string = "http://152.135.122.61:8871";
@@ -32,9 +29,7 @@ apiRoot: string = "http://152.135.122.61:8871";
       },1000);
 
 
-    
-   
-      this.http.get(this.apiRoot+'/api/tool_category_data/143/').subscribe(data =>{
+      this.http.get(this.apiRoot+'/api/tool_category_data/150/').subscribe(data =>{
         this._labListed1_INN = data as [any];
         if (this._labListed1_INN.Tool_efficiency === false) {
           $('#lab1_INN').css({fill: "rgba(239, 9, 9, 0.78)"});
@@ -127,7 +122,7 @@ apiRoot: string = "http://152.135.122.61:8871";
     })
 
 
-    this.http.get(this.apiRoot+'/api/tool_category_data/66/').subscribe(data =>{
+    this.http.get(this.apiRoot+'/api/tool_category_data/152/').subscribe(data =>{
       this._labListed4_INN = data as [any];
       if (this._labListed4_INN.Tool_efficiency === false) {
         $('#lab4_INN').css({fill: "rgba(239, 9, 9, 0.78)"});
@@ -149,11 +144,11 @@ apiRoot: string = "http://152.135.122.61:8871";
         }
     },
      ()=> {
-        if (this._labListed4.Tool_efficiency === false) {
-            $('#lab4').css({fill: "rgba(239, 9, 9, 0.78)"});
+        if (this._labListed4_INN.Tool_efficiency === false) {
+            $('#lab4_INN').css({fill: "rgba(239, 9, 9, 0.78)"});
         }
-        else if (this._labListed4.Tool_efficiency === true) {
-            $('#lab4').css({fill: "rgba(140, 192, 19, 0.88)"});
+        else if (this._labListed4_INN.Tool_efficiency === true) {
+            $('#lab4_INN').css({fill: "rgba(140, 192, 19, 0.88)"});
         }
     });
 
@@ -193,7 +188,7 @@ apiRoot: string = "http://152.135.122.61:8871";
       })
   
     
-  this.http.get(this.apiRoot+'/api/tool_category_data/54/').subscribe(data =>{
+  this.http.get(this.apiRoot+'/api/tool_category_data/156/').subscribe(data =>{
       console.log(data);
       this._labListed6_INN = data as [any];
       if (this._labListed6_INN.Tool_efficiency === false) {
@@ -226,43 +221,7 @@ apiRoot: string = "http://152.135.122.61:8871";
 
     })
 
-
-    this.http.get(this.apiRoot+'/api/tool_category_data/58/').subscribe(data =>{
-      console.log(data);
-      this._labListed6C = data as [any];
-      if (this._labListed6C.Tool_efficiency === false) {
-        $('#lab6C').css({fill: "rgba(239, 9, 9, 0.78)"});
-      }
-      else if (this._labListed6C.Tool_efficiency === true) {
-        $('#lab6C').css({fill: "rgba(140, 192, 19, 0.88)"});
-      }
-
-      $("#lab6C").hover(()=>{
-        if (this._labListed6C.Tool_Category === "Qualifications") {
-            $('#lab6C').css("fill", "rgb(125, 109, 196)");
-        }
-        else if (this._labListed6C.Tool_Category === "Field Issues") {
-            $('#lab6C').css("fill", "rgb(255, 193, 203)");
-
-        }
-        else if (this._labListed6C.Tool_Category === "Process") {
-            $('#lab6C').css({fill: "#aee9ca"});
-        }
-    },
-     ()=> {
-        if (this._labListed6C.Tool_efficiency === false) {
-            $('#lab6C').css({fill: "rgba(239, 9, 9, 0.78)"});
-        }
-        else if (this._labListed6C.Tool_efficiency === true) {
-            $('#lab6C').css({fill: "rgba(140, 192, 19, 0.88)"});
-        }
-    });
-
-    })
-
-
-
-    this.http.get(this.apiRoot+'/api/tool_category_data/136/').subscribe(data =>{
+    this.http.get(this.apiRoot+'/api/tool_category_data/149/').subscribe(data =>{
       this._labListed7_INN = data as [any];
       if (this._labListed7_INN.Tool_efficiency === false) {
         $('#lab7_INN').css({fill: "rgba(239, 9, 9, 0.78)"});
@@ -294,9 +253,7 @@ apiRoot: string = "http://152.135.122.61:8871";
 
     })
 
-
-   
-    this.http.get(this.apiRoot+'/api/tool_category_data/135/').subscribe(data =>{
+    this.http.get(this.apiRoot+'/api/tool_category_data/151/').subscribe(data =>{
         this._labListed8_INN = data as [any];
         if (this._labListed8_INN.Tool_efficiency === false) {
           $('#lab8_INN').css({fill: "rgba(239, 9, 9, 0.78)"});
@@ -327,7 +284,7 @@ apiRoot: string = "http://152.135.122.61:8871";
   
 
 
-    this.http.get(this.apiRoot+'/api/tool_category_data/75/').subscribe(data =>{
+    this.http.get(this.apiRoot+'/api/tool_category_data/155/').subscribe(data =>{
       this._labListed9_INN = data as [any];
       if (this._labListed9_INN.Tool_efficiency === false) {
         $('#lab9_INN').css({fill: "rgba(239, 9, 9, 0.78)"});
@@ -360,7 +317,7 @@ apiRoot: string = "http://152.135.122.61:8871";
     })
 
 
-    this.http.get(this.apiRoot+'/api/tool_category_data/18/').subscribe(data =>{
+    this.http.get(this.apiRoot+'/api/tool_category_data/154/').subscribe(data =>{
       this._labListed10_INN = data as [any];
       if (this._labListed10_INN.Tool_efficiency === false) {
         $('#lab10_INN').css({fill: "rgba(239, 9, 9, 0.78)"});
@@ -425,10 +382,8 @@ apiRoot: string = "http://152.135.122.61:8871";
 
     })
 
-    
 
-
-    this.http.get(this.apiRoot+'/api/tool_category_data/50/').subscribe(data =>{
+    this.http.get(this.apiRoot+'/api/tool_category_data/127/').subscribe(data =>{
       this._labListed12_INN= data as [any];
       if (this._labListed12_INN.Tool_efficiency === false) {
         $('#lab12_INN').css({fill: "rgba(239, 9, 9, 0.78)"});
@@ -461,8 +416,7 @@ apiRoot: string = "http://152.135.122.61:8871";
     })
 
     
-
-    this.http.get(this.apiRoot+'/api/tool_category_data/38/').subscribe(data =>{
+    this.http.get(this.apiRoot+'/api/tool_category_data/121/').subscribe(data =>{
       this._labListed13_INN = data as [any];
       if (this._labListed13_INN.Tool_efficiency === false) {
         $('#lab13_INN').css({fill: "rgba(239, 9, 9, 0.78)"});
@@ -495,7 +449,7 @@ apiRoot: string = "http://152.135.122.61:8871";
     })
 
 
-    this.http.get(this.apiRoot+'/api/tool_category_data/27/').subscribe(data =>{
+    this.http.get(this.apiRoot+'/api/tool_category_data/153/').subscribe(data =>{
       this._labListed14_INN = data as [any];
       if (this._labListed14_INN.Tool_efficiency === false) {
         $('#lab14_INN').css({fill: "rgba(239, 9, 9, 0.78)"});
@@ -659,44 +613,19 @@ apiRoot: string = "http://152.135.122.61:8871";
     })
 
 
-   
-    
-   
-  
-    
-
-
-    // this._cumulativeLab = '';
-    // this._cumulativeUtilization = this.http.get('assets/json/labUtilization.json').subscribe(data=>{
-    //   this._cumulativeLab = data;
-    // })
-
     this._cumulativeLab = '';
     this._data1.dashboardCumulative().subscribe(data=>{
         this._cumulativeLab = data;
     })
 
-    // this._quaterLab = '';
-    // this._quaterUtilization = this.http.get('assets/json/quaterlyLab.json').subscribe(data=>{
-    //   this._quaterLab = data;
-    // })
-
     this._quaterLab = '';
     this._data1.dashboardQuaterly().subscribe(data=>{
         this._quaterLab = data;
-    })
-
-
-        
+    })      
   }
 
   ngOnDestroy(){
       
   }
-
-
-
-
-
 
 }
