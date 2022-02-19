@@ -15,8 +15,8 @@ export class ToolcatagoryComponent implements OnInit {
 
   
 //   idToken = localStorage.getItem('csrftoken');
-apiRoot: string = "http://152.135.122.61:8871";
-//  apiRoot: string = "http://152.135.122.61:8871";
+apiRoot: string = "http://127.0.0.1:8001";
+//  apiRoot: string = "http://127.0.0.1:8001";
 //options = { headers: new HttpHeaders({'Authorization': 'JWT '+ this.cookie.get('csrftoken')}) };
   
   constructor(private _data1:DataService,private http:HttpClient,) { }
