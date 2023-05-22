@@ -145,7 +145,6 @@ export class BayhomeComponent implements OnInit {
           //     $('#bay6_INN').css({fill: "#9ac3f5"});
           //   }
           //   })
-
           this.bay6A_INN =  this._toolsListed.filter(data=>{
             return data.bay_number=='6A_INN' && data.is_active == true
           });
@@ -164,7 +163,7 @@ export class BayhomeComponent implements OnInit {
             }
             })
 
-          this.bay6B_INN =  this._toolsListed.filter(data=>{
+            this.bay6B_INN =  this._toolsListed.filter(data=>{
             return data.bay_number=='6B_INN' && data.is_active == true
           });
             this.bay6B_INN.forEach(function (value) {
@@ -181,8 +180,7 @@ export class BayhomeComponent implements OnInit {
               $('#bay6B_INN').css({fill: "#9ac3f5"});
             }
             })
-
-                  
+      
           this.bay7_INN =  this._toolsListed.filter(data=>{
             return data.bay_number=='7_INN' && data.is_active == true
           });
@@ -201,23 +199,23 @@ export class BayhomeComponent implements OnInit {
             }
             })
 
-            // this.bay8_INN =  this._toolsListed.filter(data=>{
-            //   return data.bay_number=='8_INN' && data.is_active == true
-            // });
-            //   this.bay8_INN.forEach(function (value) {
-            //   if(value.status === 'IN'){
-            //     $('#bay8_INN').css({fill: "#ffff80"});
-            //   }
-            //   else if (value.status === 'ID') {
-            //     $('#bay8_INN').css({fill: "#ff7f7f"});
-            //   }
-            //   else if (value.status === 'PR') {
-            //     $('#bay8_INN').css({fill: "#c2de80"});
-            //   }
-            //   else if (value.status === 'MA') {
-            //     $('#bay8_INN').css({fill: "#9ac3f5"});
-            //   }
-            //   })
+            this.bay8_INN =  this._toolsListed.filter(data=>{
+              return data.bay_number=='8_INN' && data.is_active == true
+            });
+              this.bay8_INN.forEach(function (value) {
+              if(value.status === 'IN'){
+                $('#bay8_INN').css({fill: "#ffff80"});
+              }
+              else if (value.status === 'ID') {
+                $('#bay8_INN').css({fill: "#ff7f7f"});
+              }
+              else if (value.status === 'PR') {
+                $('#bay8_INN').css({fill: "#c2de80"});
+              }
+              else if (value.status === 'MA') {
+                $('#bay8_INN').css({fill: "#9ac3f5"});
+              }
+              })
 
             
             this.bay8A_INN =  this._toolsListed.filter(data=>{
@@ -436,6 +434,7 @@ export class BayhomeComponent implements OnInit {
                     $('#bay18_INN').css({fill: "#9ac3f5"});
                   }
                   })
+
                 this.bay19_INN =  this._toolsListed.filter(data=>{
                   return data.bay_number=='19_INN' && data.is_active == true
                 });
@@ -453,7 +452,6 @@ export class BayhomeComponent implements OnInit {
                     $('#bay19_INN').css({fill: "#9ac3f5"});
                   }
                   })
-
 
                  })
 
